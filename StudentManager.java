@@ -39,6 +39,17 @@ public class StudentManager {
         }
     }
 
+    public void deleteAllStudents() {
+        for (Student student : students) {
+            boolean removed = students.removeIf(student -> student.getName().equalsIgnoreCase(name));
+            if (removed) {
+                System.out.println("Student removed: " + name);
+            } else {
+                System.out.println("Student not found: " + name);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         StudentManager manager = new StudentManager();
 
