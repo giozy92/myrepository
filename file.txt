@@ -1,1 +1,2 @@
 This is the first line of a line - new
+This is the second line of a line - new
