@@ -50,6 +50,15 @@ public class StudentManager {
         }
     }
 
+    public void removeStudentById(String Id) {
+        boolean removed = students.removeIf(student -> student.getId().equalsIgnoreCase(Id));
+        if (removed) {
+            System.out.println("Student removed: " + name);
+        } else {
+            System.out.println("Student not found: " + name);
+        }
+    }
+
     public static void main(String[] args) {
         StudentManager manager = new StudentManager();
 
